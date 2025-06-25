@@ -1,0 +1,49 @@
+/* Новый контейнер для .games-window и .tournaments-window */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Растягиваем на всю ширину страницы */
+    padding: 0; /* Убираем внутренние отступы */
+    gap: 40px; /* Расстояние между блоками 40px */
+    box-sizing: border-box;
+}
+
+/* Стили для главной страницы */
+.index-page-content {
+  padding: 20px 0;
+}
+
+.page-title h1 {
+  color: #FFF;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 1200px) {
+  .main-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .games-window {
+    grid-template-columns: repeat(2, 200px) !important;
+    grid-template-rows: repeat(3, 250px) !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .games-window {
+    grid-template-columns: repeat(1, 200px) !important;
+    grid-template-rows: repeat(6, 250px) !important;
+    gap: 30px 0 !important;
+  }
+  
+  .tournaments-window {
+    max-height: 400px !important;
+  }
+}
+

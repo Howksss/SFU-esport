@@ -1,0 +1,223 @@
+.change-username-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.change-username-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.change-username-modal .modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.change-username-modal .modal-content {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.change-username-modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.change-username-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.change-username-modal .register-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.change-username-modal .logo {
+  width: 80px;
+  height: 80px;
+}
+
+.change-username-modal .site-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.change-username-modal .logo-large {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.change-username-modal .logo-small {
+  font-size: 16px;
+  color: rgb(251, 103, 4);
+  margin-top: -5px;
+}
+
+.change-username-modal .close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.change-username-modal .close-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.change-username-modal .modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.change-username-modal .change-username-label {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.change-username-modal .change-username-input {
+  margin-bottom: 20px;
+}
+
+.change-username-modal .change-username-input .username-input {
+  width: 100%;
+  padding: 15px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.change-username-modal .change-username-input .username-input:focus {
+  outline: none;
+  border-color: rgb(200, 82, 3);
+}
+
+.change-username-modal .change-username-input .username-input::placeholder {
+  color: #666;
+}
+
+.change-username-modal .error-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.change-username-modal .error-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.change-username-modal .username-error {
+  color: #ff6b6b;
+  font-size: 14px;
+}
+
+.change-username-modal .change-username-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #fb6704, #0056b3);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.change-username-modal .change-username-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #fb6704, rgb(251, 103, 4));
+  transform: translateY(-2px);
+}
+
+.change-username-modal .change-username-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.change-username-modal .spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .change-username-modal .modal-content {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .change-username-modal .logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .change-username-modal .logo-large {
+    font-size: 24px;
+  }
+  
+  .change-username-modal .logo-small {
+    font-size: 14px;
+  }
+  
+  .change-username-modal .modal-title {
+    font-size: 20px;
+  }
+} 
