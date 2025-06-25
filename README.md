@@ -1,6 +1,6 @@
 <div>
   <h2>Description</h2>
-  <p>The frontend part of the «ISIT» project pinned in my BIO.</p>
+  <p>The frontend part of the «ISIT» project pinned in my bio.</p>
  <img src=https://github.com/user-attachments/assets/2bd2812b-2a10-4685-861d-5a65e1d40cc0>
   <p align=center>Project files structure</p>
 <h2>Frameworks used</h2>  
